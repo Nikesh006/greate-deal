@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREAT DEALS - Your Smart Shopping Companion</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <i data-feather="zap"></i>
+                <h1>GREAT DEALS</h1>
+            </div>
+            <div class="search-wrapper">
+                <i data-feather="search" class="search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search for 'iPhone 15', 'Sony Headphones'...">
+            </div>
+        </header>
+
+        <!-- Filters Section -->
+        <nav class="filters">
+            <h2>Categories</h2>
+            <div id="categoryFilters" class="filter-buttons">
+                <!-- Filter buttons will be dynamically inserted here -->
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <div id="results-header">
+                <h2 id="resultsTitle">Showing All Products</h2>
+                <p id="resultsCount">0 items</p>
+            </div>
+            
+            <div id="productGrid">
+                <!-- Initial/No Results/Loader Messages -->
+                <div id="initialMessage" class="message-card">
+                    <i data-feather="search"></i>
+                    <h3>Find the Best Deals Instantly</h3>
+                    <p>Use the search bar above to compare prices.</p>
+                </div>
+
+                <div id="loader" class="message-card hidden">
+                    <div class="loader"></div>
+                    <h3>Searching for Deals...</h3>
+                </div>
+                
+                <div id="noResultsMessage" class="message-card hidden">
+                    <i data-feather="frown"></i>
+                    <h3>No Products Found</h3>
+                    <p>Try a different search term or check your filters.</p>
+                </div>
+                <!-- Product cards will be injected here -->
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer>
+            <p>&copy;MADE WITH ❤️ BY NIKESH</p>
+            <p>&copy;ALL RIGHT RESERVED</p>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+    <script>
+      feather.replace(); // Initialize Feather Icons
+    </script>
+</body>
+</html>
 
